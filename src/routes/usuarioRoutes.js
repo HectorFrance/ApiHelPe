@@ -4,6 +4,6 @@ module.exports = function(app){
 	 .get(usuarios.listAll)
 	 .post(usuarios.createOne)
 
-	 app.route("/usuario/:email")
-	 .get(usuarios.showOne)
+	 app.route("/usuario")
+	 .post(usuarios.showOne)
 }
