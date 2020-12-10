@@ -6,4 +6,7 @@ module.exports = function(app){
 
 	 app.route("/usuario")
 	 .post(usuarios.showOne)
+
+	 app.route("/usuario/:id")
+	 .put()
 }
