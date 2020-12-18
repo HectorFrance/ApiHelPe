@@ -8,5 +8,5 @@ module.exports = function(app){
 	 .post(usuarios.showOne)
 
 	 app.route("/usuario/:id")
-	 .put()
+	 .put(usuarios.editOne)
 }

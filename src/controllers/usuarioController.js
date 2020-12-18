@@ -30,15 +30,6 @@ exports.createOne = async (req, res) => {
 };
 
 exports.editOne = async (req, res) => {
-  const newUser = await usuario.findOneAndUpdate(
-    req.body.oldUser,
-    req.body.newUser,
-    (err, doc) => {
-      if (err) {
-        console.log("Something wrong when updating data!");
-      }else{
-		  res.send('Usuário modificado com sucesso')
-	  }
-    }
-  );
+  const newUser = await usuario.findOneAndUpdate(req.params.id, req.body, {new: true});
+  return res.json(newUser);
 };
